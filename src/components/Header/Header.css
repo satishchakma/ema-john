@@ -1,0 +1,13 @@
+.header {
+  max-width: 1320px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.header h1 {
+  margin: 0px;
+}
+.header a {
+  color: white;
+  padding: 0px 10px;
+}
