@@ -22,3 +22,12 @@
 .icons {
   margin-left: 15px;
 }
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+}
+.dynamic-star-rating {
+  margin-left: 15px;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import "./Product.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee, faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { DynamicStar } from "react-dynamic-star";
 
 const Product = (props) => {
   const { id, name, img, price, seller, ratings } = props.product;
@@ -15,7 +16,14 @@ const Product = (props) => {
       </div>
       <div>
         <p> Manufacturer: {seller}</p>
-        <p> Rating: {ratings}</p>
+        <div className="rating">
+          Rating: {ratings}
+          <DynamicStar
+            width={parseFloat(30)}
+            height={parseFloat(30)}
+            rating={ratings}
+          />
+        </div>
       </div>
 
       <button onClick={() => props.handleAddToCart(props.product)}>
