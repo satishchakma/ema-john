@@ -3,6 +3,7 @@
   margin: auto;
   display: grid;
   grid-template-columns: 4fr 1fr;
+  position: relative;
 }
 .product-container {
   display: grid;
@@ -12,4 +13,10 @@
 }
 .cart-container {
   margin: 50px 10px;
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+  padding: 20px;
+  max-height: 500px;
+  position: sticky;
+  top: 0;
 }

@@ -16,3 +16,9 @@
   width: 100%;
   color: rgb(41, 41, 41);
 }
+.product button:hover {
+  background-color: #ffa200;
+}
+.icons {
+  margin-left: 15px;
+}
