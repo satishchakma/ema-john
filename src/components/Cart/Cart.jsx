@@ -5,10 +5,17 @@ const Cart = ({ cart }) => {
   //console.log(cart);
   let total = 0;
   let totalShipping = 0;
+  let quantity = 0;
   for (const product of cart) {
-    total += product.price;
-    totalShipping += product.shipping;
+    product.quantity = product.quantity || 1;
+    total = total + product.price * product.quantity;
+    totalShipping = totalShipping + product.price * product.quantity;
+    quantity = quantity + product.quantity;
   }
+  //   for (const product of cart) {
+  //     total += product.price;
+  //     totalShipping += product.shipping;
+  //   }
   let tax = (total * 7) / 100;
   let grandTotal = total + totalShipping + tax;
 
@@ -16,7 +23,7 @@ const Cart = ({ cart }) => {
     <div>
       <h2>Cart Summary</h2>
       <p>
-        Selected products:<strong> {cart.length}</strong>{" "}
+        Selected products:<strong> {quantity}</strong>{" "}
       </p>
       <p>
         Total Price: <strong>${total} </strong>
