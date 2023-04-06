@@ -24,9 +24,10 @@ const Shop = () => {
       if (addedProduct) {
         addedProduct.quantity = storedCart[id];
         savedCart.push(addedProduct);
-        console.log(savedCart);
+        // console.log(savedCart);
       }
     }
+    setCart(savedCart);
   }, [products]);
 
   const handleAddToCart = (product) => {
